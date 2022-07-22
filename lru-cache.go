@@ -10,7 +10,7 @@ type LRUCache struct {
 }
 
 //https://leetcode.com/problems/lru-cache/
-func Constructor(capacity int) LRUCache {
+func NewLruCache(capacity int) LRUCache {
 	return LRUCache{
 		used:     make(map[int]*list.Element, capacity+1),
 		data:     make(map[int]int, capacity),
