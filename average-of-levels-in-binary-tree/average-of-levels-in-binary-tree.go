@@ -2,8 +2,6 @@
 
 package average_of_levels_in_binary_tree
 
-import "fmt"
-
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -22,7 +20,6 @@ func averageOfLevels(root *TreeNode) []float64 {
 
 func traverse(root *TreeNode, level int) {
 	if root != nil {
-		fmt.Println(result, count)
 		if level == len(count) {
 			count = append(count, 1)
 			result = append(result, float64(root.Val))
