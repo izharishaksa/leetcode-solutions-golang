@@ -21,10 +21,10 @@ jobs:
 
       - name: Unit tests
         run: |
-#          go test ./... -covermode=count -coverprofile=coverage.out
-#          go tool cover -func=coverage.out -o=coverage.out
-          sudo go test ./... -coverprofile coverage.out -covermode count
-          sudo go tool cover -func coverage.out
+          #          go test ./... -covermode=count -coverprofile=coverage.out
+          #          go tool cover -func=coverage.out -o=coverage.out
+               sudo go test ./... -coverprofile coverage.out -covermode count
+               sudo go tool cover -func coverage.out
 
       - name: Go Coverage Badge  # Pass the `coverage.out` output to this action
         uses: tj-actions/coverage-badge-go@v2
