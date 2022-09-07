@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/n-queens/
+
 package leetcode_solutions_golang
 
 import (
