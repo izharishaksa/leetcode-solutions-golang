@@ -1,7 +1,7 @@
 package combination_sum_ii
 
 import (
-	"reflect"
+	"fmt"
 	"testing"
 )
 
@@ -31,9 +31,31 @@ func Test_combinationSum2(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := combinationSum2(tt.args.candidates, tt.args.target); !reflect.DeepEqual(got, tt.want) {
+			if got := combinationSum2(tt.args.candidates, tt.args.target); !compareSlice(got, tt.want) {
 				t.Errorf("combinationSum2() = %v, want %v", got, tt.want)
 			}
+
 		})
 	}
+}
+
+func compareSlice(got [][]int, want [][]int) bool {
+	if len(got) != len(want) {
+		return false
+	}
+	for _, w := range want {
+		if !contains(got, w) {
+			return false
+		}
+	}
+	return true
+}
+
+func contains(got [][]int, w []int) bool {
+	for _, g := range got {
+		if fmt.Sprintf("%v", g) == fmt.Sprintf("%v", w) {
+			return true
+		}
+	}
+	return false
 }
