@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/3sum-closest/
+
 package leetcode_solutions_golang
 
 import (
@@ -5,7 +7,6 @@ import (
 	"sort"
 )
 
-//https://leetcode.com/problems/3sum-closest/
 func threeSumClosest(nums []int, target int) int {
 	sort.Ints(nums)
 	min := nums[0] + nums[1] + nums[2]
