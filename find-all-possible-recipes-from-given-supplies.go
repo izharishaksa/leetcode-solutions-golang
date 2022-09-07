@@ -1,6 +1,7 @@
+//https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies/
+
 package leetcode_solutions_golang
 
-//https://leetcode.com/problems/find-all-possible-recipes-from-given-supplies/
 func findAllRecipes(recipes []string, ingredients [][]string, supplies []string) []string {
 	s := make(map[string]bool, 0)
 	for _, v := range supplies {
