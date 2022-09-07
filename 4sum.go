@@ -1,29 +1,11 @@
+//https://leetcode.com/problems/4sum/
+
 package leetcode_solutions_golang
 
 import (
 	"fmt"
 	"sort"
 )
-
-func arrToString(arr []int) string {
-	return fmt.Sprintf("%v", arr)
-}
-
-func binarySearch(arr []int, target, left, right int) bool {
-	for left <= right {
-		mid := (right + left) / 2
-		if arr[mid] == target {
-			return true
-		}
-		if arr[mid] > target {
-			right = mid - 1
-		} else {
-			left = mid + 1
-		}
-	}
-
-	return false
-}
 
 func fourSum(nums []int, target int) [][]int {
 	sort.Ints(nums)
@@ -46,4 +28,24 @@ func fourSum(nums []int, target int) [][]int {
 		result = append(result, v)
 	}
 	return result
+}
+
+func arrToString(arr []int) string {
+	return fmt.Sprintf("%v", arr)
+}
+
+func binarySearch(arr []int, target, left, right int) bool {
+	for left <= right {
+		mid := (right + left) / 2
+		if arr[mid] == target {
+			return true
+		}
+		if arr[mid] > target {
+			right = mid - 1
+		} else {
+			left = mid + 1
+		}
+	}
+
+	return false
 }
