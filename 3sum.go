@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/3sum/
+
 package leetcode_solutions_golang
 
 import (
@@ -5,7 +7,6 @@ import (
 	"sort"
 )
 
-//https://leetcode.com/problems/3sum/
 func threeSum(nums []int) [][]int {
 	sort.Slice(nums, func(i, j int) bool {
 		return nums[i] < nums[j]
