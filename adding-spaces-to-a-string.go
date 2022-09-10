@@ -1,8 +1,9 @@
+//https://leetcode.com/problems/adding-spaces-to-a-string/
+
 package leetcode_solutions_golang
 
 import "bytes"
 
-//https://leetcode.com/problems/adding-spaces-to-a-string/
 func addSpaces(s string, spaces []int) string {
 	isSpaced := make(map[int]bool)
 	for _, index := range spaces {
