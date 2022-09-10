@@ -2,8 +2,6 @@
 
 package best_time_to_buy_and_sell_stock_iv
 
-import "fmt"
-
 func maxProfit(k int, prices []int) int {
 	if k == 0 || len(prices) <= 1 {
 		return 0
@@ -24,12 +22,8 @@ func maxProfit(k int, prices []int) int {
 			}
 			dp[i][j][0] = max(dp[i-1][j][0], dp[i-1][j][1]+prices[i])
 			dp[i][j][1] = max(dp[i-1][j][1], dp[i-1][j-1][0]-prices[i])
-
-			fmt.Println(dp[i][j])
 		}
-		fmt.Println("--")
 	}
-	//fmt.Println(dp)
 	return dp[len(prices)-1][k][0]
 }
 
