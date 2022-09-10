@@ -23,10 +23,10 @@ func Test_maxProfit(t *testing.T) {
 		{
 			name: "test case 1",
 			args: args{
-				k:      2,
-				prices: []int{2, 4, 1},
+				k:      1,
+				prices: []int{1, 8, 3, 10, 5},
 			},
-			want: 2,
+			want: 9,
 		},
 	}
 	for _, tt := range tests {
