@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/lru-cache/
+
 package leetcode_solutions_golang
 
 import "container/list"
@@ -9,7 +11,6 @@ type LRUCache struct {
 	capacity int
 }
 
-//https://leetcode.com/problems/lru-cache/
 func NewLruCache(capacity int) LRUCache {
 	return LRUCache{
 		used:     make(map[int]*list.Element, capacity+1),
