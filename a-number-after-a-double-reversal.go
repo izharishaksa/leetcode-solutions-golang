@@ -1,6 +1,7 @@
+//https://leetcode.com/problems/a-number-after-a-double-reversal/
+
 package leetcode_solutions_golang
 
-//https://leetcode.com/problems/a-number-after-a-double-reversal/
 func isSameAfterReversals(num int) bool {
 	origin := num
 	result := 0
