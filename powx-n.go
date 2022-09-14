@@ -1,6 +1,7 @@
+//https://leetcode.com/problems/powx-n/
+
 package leetcode_solutions_golang
 
-//https://leetcode.com/problems/powx-n/
 func myPow(x float64, n int) float64 {
 	if n == 0 {
 		return 1
